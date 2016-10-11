@@ -1,6 +1,9 @@
 import UIKit
+import CoreLocation
 
-class CurrentLocationViewController: UIViewController {
+class CurrentLocationViewController: UIViewController,
+                                            CLLocationManagerDelegate {
+  let locationManager = CLLocationManager()
   
   @IBOutlet weak var messageLabel: UILabel!
   @IBOutlet weak var latitudeLabel: UILabel!
@@ -20,7 +23,7 @@ class CurrentLocationViewController: UIViewController {
   }
   
   @IBAction func getLocation() {
-    //TODO: Add functionality to get location
+    
   }
 
 
