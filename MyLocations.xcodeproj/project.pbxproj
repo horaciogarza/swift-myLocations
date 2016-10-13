@@ -304,6 +304,7 @@
 				EB2C81871DAC67FA00E0B975 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
