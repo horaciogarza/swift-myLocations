@@ -7,6 +7,10 @@ class CurrentLocationViewController: UIViewController,
   var location: CLLocation?
   var updatingLocation = false
   var lastLocationError: Error?
+  let geocoder = CLGeocoder()
+  var placemark: CLPlacemark?
+  var performingReverseGeocoding = false
+  var lastGeocodingError: Error?
   
   @IBOutlet weak var messageLabel: UILabel!
   @IBOutlet weak var latitudeLabel: UILabel!
@@ -18,6 +22,7 @@ class CurrentLocationViewController: UIViewController,
   override func viewDidLoad() {
     super.viewDidLoad()
     updateLabels()
+    configureGetButton()
   }
 
   override func didReceiveMemoryWarning() {
@@ -38,8 +43,15 @@ class CurrentLocationViewController: UIViewController,
       return
     }
     
-    startLocationManager()
+    if updatingLocation {
+      stopLocationManager()
+    } else {
+      location = nil
+      lastLocationError = nil
+      startLocationManager()
+    }
     updateLabels()
+    configureGetButton()
   }
   
   func showLocationServicesDeniedAlert() {
@@ -117,6 +129,7 @@ class CurrentLocationViewController: UIViewController,
     lastLocationError = error
     stopLocationManager()
     updateLabels()
+    configureGetButton()
   }
   
   func locationManager(_ manager: CLLocationManager,
@@ -141,10 +154,18 @@ class CurrentLocationViewController: UIViewController,
       if newLocation.horizontalAccuracy <= locationManager.desiredAccuracy {
         print("*** We are done")
         stopLocationManager()
+        configureGetButton()
       }
     }
   }
 
+  func configureGetButton() {
+    if updatingLocation {
+      getButton.setTitle("Stop", for: .normal)
+    } else {
+      getButton.setTitle("Get My Location", for: .normal)
+    }
+  }
 
 }
 
