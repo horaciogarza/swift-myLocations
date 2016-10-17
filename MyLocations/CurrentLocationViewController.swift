@@ -11,6 +11,7 @@ class CurrentLocationViewController: UIViewController,
   var placemark: CLPlacemark?
   var performingReverseGeocoding = false
   var lastGeocodingError: Error?
+  var timer: Timer?
   
   @IBOutlet weak var messageLabel: UILabel!
   @IBOutlet weak var latitudeLabel: UILabel!
@@ -118,6 +119,8 @@ class CurrentLocationViewController: UIViewController,
       locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
       locationManager.startUpdatingLocation()
       updatingLocation = true
+      
+      timer = Timer.scheduledTimer(timeInterval: 60, target: self, selector: #selector(didTimeOut), userInfo: nil, repeats: false)
     }
   }
   
@@ -126,6 +129,10 @@ class CurrentLocationViewController: UIViewController,
       locationManager.stopUpdatingLocation()
       locationManager.delegate = nil
       updatingLocation = false
+      
+      if let timer = timer {
+        timer.invalidate()
+      }
     }
   }
   
@@ -250,5 +257,18 @@ class CurrentLocationViewController: UIViewController,
     }
   }
 
+  func didTimeOut() {
+    print("*** Time Out")
+    
+    if location == nil {
+      stopLocationManager()
+      
+      lastLocationError = NSError(domain: "MyLocationsErrorDomain",
+                                  code: 1, userInfo: nil)
+      
+      updateLabels()
+      configureGetButton()
+    }
+  }
 }
 
