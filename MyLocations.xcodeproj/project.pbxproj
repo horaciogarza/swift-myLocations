@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB09E55F1DB65DEB00DDE0FD /* LocationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB09E55E1DB65DEB00DDE0FD /* LocationDetailsViewController.swift */; };
 		EB2C81751DAC67FA00E0B975 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2C81741DAC67FA00E0B975 /* AppDelegate.swift */; };
 		EB2C81771DAC67FA00E0B975 /* CurrentLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2C81761DAC67FA00E0B975 /* CurrentLocationViewController.swift */; };
 		EB2C81791DAC67FA00E0B975 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2C81781DAC67FA00E0B975 /* SecondViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EB09E55E1DB65DEB00DDE0FD /* LocationDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDetailsViewController.swift; sourceTree = "<group>"; };
 		EB2C81711DAC67FA00E0B975 /* MyLocations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLocations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB2C81741DAC67FA00E0B975 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB2C81761DAC67FA00E0B975 /* CurrentLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLocationViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				EB2C817D1DAC67FA00E0B975 /* Assets.xcassets */,
 				EB2C817F1DAC67FA00E0B975 /* LaunchScreen.storyboard */,
 				EB2C81821DAC67FA00E0B975 /* Info.plist */,
+				EB09E55E1DB65DEB00DDE0FD /* LocationDetailsViewController.swift */,
 			);
 			path = MyLocations;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB09E55F1DB65DEB00DDE0FD /* LocationDetailsViewController.swift in Sources */,
 				EB2C81791DAC67FA00E0B975 /* SecondViewController.swift in Sources */,
 				EB2C81751DAC67FA00E0B975 /* AppDelegate.swift in Sources */,
 				EB2C81771DAC67FA00E0B975 /* CurrentLocationViewController.swift in Sources */,
