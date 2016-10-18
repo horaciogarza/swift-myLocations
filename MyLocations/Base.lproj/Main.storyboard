@@ -136,7 +136,18 @@
                             <outlet property="delegate" destination="bMc-fG-yIY" id="Hvd-eW-Wlx"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Tag Location" id="xjR-wX-p3i"/>
+                    <navigationItem key="navigationItem" title="Tag Location" id="xjR-wX-p3i">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="4yr-kN-thp">
+                            <connections>
+                                <action selector="cancel" destination="bMc-fG-yIY" id="7wU-IB-Ef0"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="pq8-IX-V4e">
+                            <connections>
+                                <action selector="done" destination="bMc-fG-yIY" id="KQA-U6-tDg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IdD-77-q2b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
