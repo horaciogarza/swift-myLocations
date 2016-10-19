@@ -61,6 +61,22 @@ class LocationDetailsViewController: UITableViewController {
     }
   }
   
+  override func tableView(_ tableView: UITableView,
+                          willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+    if indexPath.section == 0 || indexPath.section == 1 {
+      return indexPath
+    } else {
+      return nil
+    }
+  }
+  
+  override func tableView(_ tableView: UITableView,
+                          didSelectRowAt indexPath: IndexPath) -> IndexPath {
+    if indexPath.section == 0 && indexPath.row == 0  {
+      descriptionTextView.becomeFirstResponder()
+    }
+  }
+  
   @IBAction func done() {
     dismiss(animated: true, completion: nil)   
   }
