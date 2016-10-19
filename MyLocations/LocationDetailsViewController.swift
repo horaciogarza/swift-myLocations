@@ -71,7 +71,7 @@ class LocationDetailsViewController: UITableViewController {
   }
   
   override func tableView(_ tableView: UITableView,
-                          didSelectRowAt indexPath: IndexPath) -> IndexPath {
+                          didSelectRowAt indexPath: IndexPath) {
     if indexPath.section == 0 && indexPath.row == 0  {
       descriptionTextView.becomeFirstResponder()
     }
