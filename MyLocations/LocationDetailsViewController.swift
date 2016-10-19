@@ -93,6 +93,12 @@ class LocationDetailsViewController: UITableViewController {
     return text
   }
   
+  @IBAction func categoryPickerDidPickCategory (_ segue: UIStoryboardSegue) {
+    let controller = segue.source as! CategoryPickerViewController
+    categoryName = controller.selectedCategoryName
+    categoryLabel.text = categoryName
+  }
+  
   func format(date: Date) -> String {
     return dateFormatter.string(from: date)
   }
