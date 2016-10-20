@@ -389,7 +389,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LocationCell" rowHeight="57" id="CcF-Vf-sEh" customClass="LocationCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LocationCell" rowHeight="57" id="CcF-Vf-sEh" customClass="LocationCell" customModule="MyLocations" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="375" height="57"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CcF-Vf-sEh" id="Zc4-Kn-VXS">
@@ -413,8 +413,8 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="addressLabel" destination="2qI-Hf-byr" id="J7T-cV-icA"/>
-                                    <outlet property="descriptionLabel" destination="v9A-6A-Bh4" id="lsW-cF-6Vc"/>
+                                    <outlet property="addressLabel" destination="2qI-Hf-byr" id="QEe-lc-3yZ"/>
+                                    <outlet property="descriptionLabel" destination="v9A-6A-Bh4" id="Guu-ag-Ute"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

@@ -2,7 +2,9 @@
 import UIKit
 
 class LocationCell: UITableViewCell {
+
   @IBOutlet weak var descriptionLabel: UILabel!
+  
   @IBOutlet weak var addressLabel: UILabel!
   
   override func awakeFromNib() {
@@ -15,13 +17,30 @@ class LocationCell: UITableViewCell {
 
       // Configure the view for the selected state
   }
-  
-  override func tableView(_ tableView: UITableView,
-                          cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "LocationCell",
-                                             for: indexPath) as! LocationCell
-    let location = locations[indexPath.row]
-    cell.configure(for: location)
-  }
 
+  func configure(for location: Location) {
+    if location.locationDescription.isEmpty {
+      descriptionLabel.text = "(No Description)"
+    } else {
+      descriptionLabel.text = location.locationDescription
+    }
+    
+    if let placemark = location.placemark {
+      var text = ""
+      if let s = placemark.subThoroughfare {
+        text += s + " "
+      }
+      if let s = placemark.thoroughfare {
+        text += s + ", "
+      }
+      if let s = placemark.locality {
+        text += s
+      }
+      addressLabel.text = text
+    } else {
+      addressLabel.text = String(format: "Lat: &.8f, Long %.8f",
+                                 location.latitude, location.longitude)
+    }
+
+  }
 }
