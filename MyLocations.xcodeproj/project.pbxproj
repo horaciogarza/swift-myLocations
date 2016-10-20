@@ -20,6 +20,7 @@
 		EB5DF2741DB90C5A0010B617 /* Location+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5DF2721DB90C5A0010B617 /* Location+CoreDataClass.swift */; };
 		EB5DF2751DB90C5A0010B617 /* Location+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5DF2731DB90C5A0010B617 /* Location+CoreDataProperties.swift */; };
 		EB5DF2771DB95F890010B617 /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5DF2761DB95F880010B617 /* LocationsViewController.swift */; };
+		EB5DF27B1DB9854A0010B617 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5DF27A1DB9854A0010B617 /* LocationCell.swift */; };
 		EB5E0C831DB699C80086923C /* CategoryPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5E0C821DB699C70086923C /* CategoryPickerViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		EB5DF2721DB90C5A0010B617 /* Location+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataClass.swift"; sourceTree = "<group>"; };
 		EB5DF2731DB90C5A0010B617 /* Location+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		EB5DF2761DB95F880010B617 /* LocationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
+		EB5DF27A1DB9854A0010B617 /* LocationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		EB5E0C821DB699C70086923C /* CategoryPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryPickerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,6 +89,7 @@
 				EB5DF2691DB8472C0010B617 /* Functions.swift */,
 				EB5DF26B1DB90A060010B617 /* DataModel.xcdatamodeld */,
 				EB5DF2761DB95F880010B617 /* LocationsViewController.swift */,
+				EB5DF27A1DB9854A0010B617 /* LocationCell.swift */,
 			);
 			path = MyLocations;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 				EB41506E1DB7B97500F2E0FD /* HudView.swift in Sources */,
 				EB5DF2771DB95F890010B617 /* LocationsViewController.swift in Sources */,
 				EB5DF2751DB90C5A0010B617 /* Location+CoreDataProperties.swift in Sources */,
+				EB5DF27B1DB9854A0010B617 /* LocationCell.swift in Sources */,
 				EB5DF26A1DB8472C0010B617 /* Functions.swift in Sources */,
 				EB2C81751DAC67FA00E0B975 /* AppDelegate.swift in Sources */,
 				EB5DF2741DB90C5A0010B617 /* Location+CoreDataClass.swift in Sources */,
