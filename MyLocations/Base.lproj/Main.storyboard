@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,72 +19,131 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(Latitude Goes Here)" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alV-2p-8aQ">
-                                <frame key="frameInset" minY="110" width="174" height="30" maxX="17"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sin título-2" translatesAutoresizingMaskIntoConstraints="NO" id="PCS-j0-aRW">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="405" id="uPh-4l-vwE"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Message Label)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yug-Tg-5xo">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="286" id="9HL-Jt-KRN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(Longitude Goes Here)" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCq-YX-41t">
-                                <frame key="frameInset" minY="148" width="174" height="30" maxX="17"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Naranjo 1806, Col. Santa María" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BAY-3h-fv5">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="182" id="sEw-3F-Tl0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <color key="textColor" red="0.22372689843177795" green="0.75713866949081421" blue="0.56032681465148926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C5C-Y9-fe1">
-                                <frame key="frameInset" minX="50.21%" width="138" height="29" maxY="86"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <state key="normal" title="Get My Location"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coordinates:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ru9-c3-u8Z">
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <color key="textColor" red="0.22372689843177795" green="0.75713866949081421" blue="0.56032681465148926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(0.0, 0.0)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCq-YX-41t">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="141" id="fGX-Fc-hTX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <color key="textColor" red="0.22372689843177795" green="0.75713866949081421" blue="0.56032681465148926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVh-Tm-b7N">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="77" id="BGf-he-zkE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <color key="textColor" red="0.22372689843177795" green="0.75713866949081421" blue="0.56032681465148926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Locations" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eIc-Zs-pDO">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="204" id="Mqd-Jm-JZf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="33"/>
+                                <color key="textColor" red="0.22372689843177795" green="0.75713866949081421" blue="0.56032681465148926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C5C-Y9-fe1" customClass="customButton" customModule="MyLocations" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="175" id="4p8-nQ-eVa"/>
+                                    <constraint firstAttribute="height" constant="48" id="aPw-HO-hgZ"/>
+                                </constraints>
+                                <state key="normal" title="Get My Location">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="24"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="getLocation" destination="9pv-A4-QxB" eventType="touchUpInside" id="vPU-1p-67d"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(Message Label)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yug-Tg-5xo">
-                                <frame key="frameInset" minX="55.06%" minY="10" width="286" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Latitude:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ru9-c3-u8Z">
-                                <frame key="frameInset" minX="16" minY="110" width="82" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Longitude:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfD-OW-uoH">
-                                <frame key="frameInset" minX="16" minY="148" width="82" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(Address Goes Here)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BAY-3h-fv5">
-                                <frame key="frameInset" minX="16" minY="198" width="288" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lrA-4J-OyP">
-                                <frame key="frameInset" minX="50.19%" minY="296" width="108" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Tag Location"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lrA-4J-OyP" customClass="customButton" customModule="MyLocations" customModuleProvider="target">
+                                <state key="normal" title="Tag Location">
+                                    <color key="titleColor" red="0.22372689843177795" green="0.75713866949081421" blue="0.56032681465148926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="24"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.22372689840000001" green="0.75713866949999997" blue="0.56032681470000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="cy0-Vu-SNQ" kind="presentation" identifier="TagLocation" id="P9f-Ck-MiM"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.22352941176470587" green="0.75686274509803919" blue="0.5607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lrA-4J-OyP" firstAttribute="top" secondItem="BAY-3h-fv5" secondAttribute="bottom" constant="37.5" id="2gn-qy-fvM"/>
+                            <constraint firstItem="BAY-3h-fv5" firstAttribute="leading" secondItem="MVh-Tm-b7N" secondAttribute="trailing" constant="27" id="3DY-vX-ccg"/>
+                            <constraint firstItem="MVh-Tm-b7N" firstAttribute="top" secondItem="ru9-c3-u8Z" secondAttribute="bottom" constant="37" id="4BO-BN-BoL"/>
+                            <constraint firstItem="PCS-j0-aRW" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="KwC-X6-9ig"/>
+                            <constraint firstAttribute="trailing" secondItem="PCS-j0-aRW" secondAttribute="trailing" id="LBQ-5s-onw"/>
+                            <constraint firstItem="BAY-3h-fv5" firstAttribute="top" secondItem="fCq-YX-41t" secondAttribute="bottom" constant="38" id="NYO-Cp-IWP"/>
+                            <constraint firstItem="lrA-4J-OyP" firstAttribute="height" secondItem="C5C-Y9-fe1" secondAttribute="height" id="Q2q-vO-J80"/>
+                            <constraint firstItem="eIc-Zs-pDO" firstAttribute="centerX" secondItem="PCS-j0-aRW" secondAttribute="centerX" id="Z3E-Ca-Wdd"/>
+                            <constraint firstItem="lrA-4J-OyP" firstAttribute="centerX" secondItem="C5C-Y9-fe1" secondAttribute="centerX" id="ZDZ-F1-IWZ"/>
+                            <constraint firstItem="yug-Tg-5xo" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="topMargin" constant="15" id="a6P-YP-ky4"/>
+                            <constraint firstItem="PCS-j0-aRW" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="bIE-kI-eZq"/>
+                            <constraint firstItem="PCS-j0-aRW" firstAttribute="top" secondItem="eIc-Zs-pDO" secondAttribute="bottom" constant="-120" id="cu6-A4-x56"/>
+                            <constraint firstItem="PCS-j0-aRW" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="g6L-lX-InI"/>
+                            <constraint firstAttribute="trailing" secondItem="PCS-j0-aRW" secondAttribute="trailing" id="g7G-ke-FxH"/>
+                            <constraint firstItem="PCS-j0-aRW" firstAttribute="top" secondItem="yug-Tg-5xo" secondAttribute="bottom" constant="31.5" id="gS3-VE-G7i"/>
+                            <constraint firstItem="lrA-4J-OyP" firstAttribute="width" secondItem="C5C-Y9-fe1" secondAttribute="width" id="hge-2J-6Qf"/>
+                            <constraint firstItem="PCS-j0-aRW" firstAttribute="leading" secondItem="ru9-c3-u8Z" secondAttribute="trailing" constant="-150" id="ieo-yY-xow"/>
+                            <constraint firstItem="ru9-c3-u8Z" firstAttribute="top" secondItem="eIc-Zs-pDO" secondAttribute="bottom" constant="54" id="jor-Kf-gkn"/>
+                            <constraint firstItem="C5C-Y9-fe1" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="mOY-lq-Hhi"/>
+                            <constraint firstItem="yug-Tg-5xo" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="psy-9f-znH"/>
+                            <constraint firstItem="C5C-Y9-fe1" firstAttribute="top" secondItem="PCS-j0-aRW" secondAttribute="bottom" constant="49" id="rDz-ql-ihP"/>
+                            <constraint firstItem="fCq-YX-41t" firstAttribute="leading" secondItem="ru9-c3-u8Z" secondAttribute="trailing" constant="3" id="wTR-nD-fXN"/>
+                            <constraint firstItem="fCq-YX-41t" firstAttribute="top" secondItem="eIc-Zs-pDO" secondAttribute="bottom" constant="53" id="yQV-5t-s6Q"/>
+                            <constraint firstItem="PCS-j0-aRW" firstAttribute="leading" secondItem="MVh-Tm-b7N" secondAttribute="trailing" constant="-126" id="zW6-lh-AhW"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Tag" image="first" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="addressLabel" destination="BAY-3h-fv5" id="BVj-SF-BbW"/>
                         <outlet property="getButton" destination="C5C-Y9-fe1" id="DKP-Kk-V4E"/>
-                        <outlet property="latitudeLabel" destination="alV-2p-8aQ" id="pMa-i8-xSd"/>
                         <outlet property="longitudeLabel" destination="fCq-YX-41t" id="uZq-Ne-gNU"/>
                         <outlet property="messageLabel" destination="yug-Tg-5xo" id="rRW-wx-Mmd"/>
                         <outlet property="tagButton" destination="lrA-4J-OyP" id="M1C-0P-jRo"/>
@@ -91,7 +151,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="978" y="-322"/>
+            <point key="canvasLocation" x="976.79999999999995" y="-322.48875562218893"/>
         </scene>
         <!--Tag Location-->
         <scene sceneID="rND-lR-SpQ">
@@ -449,9 +509,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Sin título-2" width="512" height="512"/>
         <image name="first" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="QsE-xz-pjp"/>
+        <segue reference="P9f-Ck-MiM"/>
     </inferredMetricsTieBreakers>
 </document>
