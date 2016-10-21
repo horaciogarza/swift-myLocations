@@ -413,6 +413,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="addressLabel" destination="2qI-Hf-byr" id="Msu-kU-DW4"/>
                                     <outlet property="descriptionLabel" destination="v9A-6A-Bh4" id="Guu-ag-Ute"/>
                                     <segue destination="cy0-Vu-SNQ" kind="presentation" identifier="EditLocation" id="QsE-xz-pjp"/>
                                 </connections>

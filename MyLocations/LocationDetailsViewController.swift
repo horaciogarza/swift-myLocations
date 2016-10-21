@@ -15,6 +15,20 @@ class LocationDetailsViewController: UITableViewController {
   var placemark: CLPlacemark?
   var categoryName = "No Category"
   var date = Date()
+  var descriptionText = ""
+  
+  var locationToEdit: Location? {
+    didSet {
+      if let location = locationToEdit {
+        descriptionText = location.locationDescription
+        categoryName = location.category
+        date = location.date
+        coordinate = CLLocationCoordinate2DMake(location.latitude,
+                                                 location.longitude)
+        placemark = location.placemark
+      }
+    }
+  }
   
   
   @IBOutlet weak var descriptionTextView: UITextView!
@@ -27,7 +41,11 @@ class LocationDetailsViewController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    descriptionTextView.text = ""
+    if let location = locationToEdit {
+      title = "Edit Location"
+    }
+
+    descriptionTextView.text = descriptionText
     categoryLabel.text = categoryName
     latitudeLabel.text = String(format: "%.8f", coordinate.latitude)
     longitudeLabel.text = String(format: "%.8f", coordinate.longitude)

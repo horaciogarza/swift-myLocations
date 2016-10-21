@@ -5,7 +5,7 @@ import CoreLocation
 class LocationsViewController: UITableViewController {
   var managedObjectContext: NSManagedObjectContext!
   var locations = [Location]()
-  
+
   override func viewDidLoad() {
     super.viewDidLoad()
     
