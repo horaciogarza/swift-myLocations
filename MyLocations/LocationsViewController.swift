@@ -24,6 +24,21 @@ class LocationsViewController: UITableViewController {
     }
   }
   
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "EditLocation" {
+      let navigationController = segue.destination as! UINavigationController
+      
+      let controller = navigationController.topViewController
+                                          as! LocationDetailsViewController
+      controller.managedObjectContext = managedObjectContext
+      
+      if let indexPath = tableView.indexPath(for: sender as! UITableViewCell) {
+        let location = locations[indexPath.row]
+        controller.locationToEdit = location
+      }
+    }
+  }
+  
   // MARK: - UITableViewDataSource
   
   override func tableView(_ tableView: UITableView,
